@@ -1,0 +1,17 @@
+version: "3"
+services:
+  php:
+    build: .
+    volumes:
+      - ./html:/var/www/html
+      - ./app:/app
+    ports:
+      - "8081:80"
+
+  composer:
+    image: composer
+    volumes:
+      - ./app:/app
+    links:
+      - php
+    command: "composer update"
