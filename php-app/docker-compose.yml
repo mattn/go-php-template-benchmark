@@ -3,10 +3,18 @@ services:
   php:
     build: .
     volumes:
-      - ./html:/var/www/html
+      - ./html:/usr/share/nginx/html
       - ./app:/app
-    ports:
-      - "8081:80"
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./html:/usr/share/nginx/html
+    restart: always
+    ports: ["8080:80"]
+    depends_on: ["php"]
 
   composer:
     image: composer

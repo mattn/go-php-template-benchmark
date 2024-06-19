@@ -1,7 +1,7 @@
 {
   "name": "do-mu-oi/makeshop-smarty",
   "require": {
-    "smarty/smarty": "^3.1"
+    "smarty/smarty": "^5.3"
   },
   "authors": [
     {

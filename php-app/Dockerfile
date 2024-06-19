@@ -1,3 +1,2 @@
-FROM php:7.3-apache
+FROM php:8.2-fpm
 
-RUN a2enmod rewrite
