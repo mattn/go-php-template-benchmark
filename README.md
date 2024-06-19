@@ -7,6 +7,7 @@ template engine benchmark for Go(html/template) and PHP
 PHP 8.2 fpm smarty
 
 ```
+$ ab -n 10000 -c 10 http://localhost:8081/
 This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -54,6 +55,7 @@ Percentage of the requests served within a certain time (ms)
 Go 1.21 html/tmeplate
 
 ```
+$ ab -n 10000 -c 10 http://localhost:8080/
 This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
