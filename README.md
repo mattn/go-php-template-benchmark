@@ -8,7 +8,7 @@ PHP 8.2 fpm smarty
 
 ```
 $ ab -n 10000 -c 10 http://localhost:8081/
-This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -23,40 +23,40 @@ Document Path:          /
 Document Length:        20041 bytes
 
 Concurrency Level:      10
-Time taken for tests:   3.899 seconds
+Time taken for tests:   8.913 seconds
 Complete requests:      10000
 Failed requests:        0
 Total transferred:      202040000 bytes
 HTML transferred:       200410000 bytes
-Requests per second:    2564.86 [#/sec] (mean)
-Time per request:       3.899 [ms] (mean)
-Time per request:       0.390 [ms] (mean, across all concurrent requests)
-Transfer rate:          50605.87 [Kbytes/sec] received
+Requests per second:    1121.95 [#/sec] (mean)
+Time per request:       8.913 [ms] (mean)
+Time per request:       0.891 [ms] (mean, across all concurrent requests)
+Transfer rate:          22136.55 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.1      0       1
-Processing:     1    4   1.0      4      16
-Waiting:        1    3   1.0      3      15
-Total:          2    4   1.0      4      16
+Connect:        0    0   2.5      0     176
+Processing:     3    8   9.8      8     184
+Waiting:        2    8   9.8      7     184
+Total:          3    9  10.1      8     186
 
 Percentage of the requests served within a certain time (ms)
-  50%      4
-  66%      4
-  75%      4
-  80%      4
-  90%      5
-  95%      6
-  98%      7
-  99%      7
- 100%     16 (longest request)
+  50%      8
+  66%      8
+  75%      9
+  80%      9
+  90%     10
+  95%     12
+  98%     14
+  99%     16
+ 100%    186 (longest request)
 ```
 
-Go 1.21 html/tmeplate
+Go 1.21 html/template
 
 ```
 $ ab -n 10000 -c 10 http://localhost:8080/
-This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -71,33 +71,33 @@ Document Path:          /
 Document Length:        17039 bytes
 
 Concurrency Level:      10
-Time taken for tests:   6.945 seconds
+Time taken for tests:   5.966 seconds
 Complete requests:      10000
 Failed requests:        0
 Total transferred:      171350000 bytes
 HTML transferred:       170390000 bytes
-Requests per second:    1439.82 [#/sec] (mean)
-Time per request:       6.945 [ms] (mean)
-Time per request:       0.695 [ms] (mean, across all concurrent requests)
-Transfer rate:          24093.05 [Kbytes/sec] received
+Requests per second:    1676.18 [#/sec] (mean)
+Time per request:       5.966 [ms] (mean)
+Time per request:       0.597 [ms] (mean, across all concurrent requests)
+Transfer rate:          28048.16 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.1      0       2
-Processing:     2    7   3.6      6      75
-Waiting:        1    4   2.1      3      43
-Total:          2    7   3.6      6      75
+Connect:        0    0   0.2      0       5
+Processing:     2    6   2.2      5      28
+Waiting:        1    4   1.9      4      27
+Total:          2    6   2.2      6      29
 
 Percentage of the requests served within a certain time (ms)
   50%      6
-  66%      7
-  75%      8
-  80%      8
-  90%     10
-  95%     12
-  98%     15
-  99%     19
- 100%     75 (longest request)
+  66%      6
+  75%      7
+  80%      7
+  90%      8
+  95%     10
+  98%     11
+  99%     13
+ 100%     29 (longest request)
 ```
 
 ## License
