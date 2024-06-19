@@ -1,0 +1,7 @@
+{% func HTML(input []string) %}
+
+{% for _, s := range input %}
+<li>{%s s %}</li>
+{% endfor %}
+
+{% endfunc %}

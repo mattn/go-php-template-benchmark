@@ -5,5 +5,11 @@ services:
     volumes:
       - ./app:/app
     working_dir: /app
-    ports:
-      - "8080:8081"
+    network_mode: host
+    #ports:
+    #  - "8080:8081"
+    environment:
+      - GOMAXPROCS=4
+    deploy:
+      mode: replicated
+      replicas: 4
