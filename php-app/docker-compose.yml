@@ -1,7 +1,7 @@
 version: "3"
 services:
   php:
-    build: .
+    image: php:8.2-fpm
     volumes:
       - ./html:/usr/share/nginx/html
       - ./app:/app
